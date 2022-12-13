@@ -1,6 +1,6 @@
 # git
 
-## git 존재이유
+## git 사용이유
 
      - 버전관리 
 
@@ -14,9 +14,9 @@
      git config --global user.name "name"
      git config --global user.email "email@com"
      git remote add <name> <URL>
-     git push <name> <brahcn>
+     git push <name> <branch>
      git clond <URL>
-     git pull origin master
+     git pull <name> <branch>
      
 
 - `git init`
@@ -46,3 +46,13 @@
 
 - `git config --global user.email "email@com"`
    - git 커밋 내역에 기록될 이메일 주소
+
+- `git remote add <name> <URL>`
+   - local repo과 remote repo를 연결시켜주는 작업
+   - 쉽게 말하면 local repo는 내컴퓨터이고 remote repo는 깃허브
+
+- `git push <name> <branch>`
+
+
+- `git pull <name> <branch>`
+
