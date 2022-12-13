@@ -1,5 +1,10 @@
-# git 기초
+# git
 
+## git 존재이유
+
+     - 버전관리 
+
+## git 기초 명령어
      git init
      git add
      git restore --staged <file>
@@ -8,6 +13,7 @@
      git log
      git config --global user.name "name"
      git config --global user.email "email@com"
+
 
 - `git init`
 
@@ -36,6 +42,3 @@
 
 - `git config --global user.email "email@com"`
    - git 커밋 내역에 기록될 이메일 주소
-
-
-
