@@ -27,7 +27,7 @@
 - git restore --staged <file>
      - stage에서 working directory로 내리고 싶을때 사용.
 
-- `git commit`
+- `git commit`(사진첩)
      - stage에 올라온 파일을 촬영하는 것.
      - 촬영을 다 마쳤으면 working directory로 이동함.
 
