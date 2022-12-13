@@ -13,7 +13,11 @@
      git log
      git config --global user.name "name"
      git config --global user.email "email@com"
-
+     git remote add <name> <URL>
+     git push <name> <brahcn>
+     git clond <URL>
+     git pull origin master
+     
 
 - `git init`
 
