@@ -6,7 +6,7 @@
 
 ## git 기초 명령어
      git init
-     git add
+     git add .
      git restore --staged <file>
      git commit -m 'msg'
      git status
