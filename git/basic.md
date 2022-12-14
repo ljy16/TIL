@@ -9,6 +9,13 @@
      4. master 있으면 init 하면 안됨.
 3. home(~) 폴더에서 init 하지 않기
 4. (지금은)github에서 직접 수정하지 않기
+
+## git 사용 시 권장사항
+1. 커밋 메시지는 짧지만 내용은 담아서
+2. 모든 repo(프로젝트)는
+   1. 리포 최상단(.git/과 같은 위치에)
+   2. READme.md
+   3. .gitignore 담고 있어야 한다.
      
 
 ## 계정 세팅
@@ -123,7 +130,7 @@ $ git remote -v
 $ git push origin master
 ```
 
-9. 새로운 컴퓨터에서 기존 원격 저장소 복제하기
+`9. 새로운 컴퓨터에서 기존 원격 저장소 복제하기`
 ```sh
 $ git clone <URL>
 ```
@@ -132,3 +139,22 @@ $ git clone <URL>
 ```sh
 $ git pull origin master
 ```
+
+|상황|명령어|
+|-|-|
+|새 프로젝트 시작| `$ mkdir new_project`| 
+|프로젝트 폴더로 이동|`$ cd  new_project`|
+|리포 초기화|`$ git init`|
+|README, .gitignore 생성|`$ touch README.md, .gitignore`|
+|파일 스테이징|`$ git add .`|
+|커밋|`$ git commit -m 'first commit(message)'`|
+|원격 저장소 생성|github 사이트에서 new repository|
+|원격 저장소 등록|`$ git remote add origin <URL>`|
+|원격 저장소 push|`$ git push origin master`|
+|다른 컴퓨터에서 원격저장소 복제|`$ git clone <URL>`|
+|작업|`add` , `master`|
+|귀가 직전|`$ git push origin master`|
+|집 도착 후|`$ git pull origin master`|
+|작업|`add` , `master`|
+|작업 종료|`$ git push origin master`|
+|다른 컴퓨터에서 반복|`$ git pull origin master`|
