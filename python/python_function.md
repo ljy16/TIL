@@ -1,4 +1,4 @@
-# 함수(function)
+# 함수(function) 1
     - 특정한 기능(function)을 하는 코드의 묶음
 
 ## 함수를 쓰는 이유
@@ -113,20 +113,22 @@ def my_list_max(list_a, list_b):
 print(greeting('재용'))
 ```
 
-*주의* 기본 인자값을 가지는 인자 다음에 기본 값이 없는 인자를 사용할 수 없음.
+*주의*   
+기본 인자값을 가지는 인자 다음에 기본 값이 없는 인자를 사용할 수 없음.
 ```
     ex) 
     def greeting(name='john', age):
         return f'{name]은 {age}살입니다.'
 
     greeting(26)
-    ->오류 
+    -> 오류 
 ```
 ```
     def greeting(age, name='jaeyong'):
         return f'{name}은 {age}살입니다.'
     
     greeting(26)
+    -> 정상 작동
 ```
 
 ### 키워드 인자(Keyword Arguments)
@@ -149,7 +151,7 @@ greeting(26, 'ljy', '강동', '전기전자')
     def func(a, b, *args):
 ```
 
-### 함수 연습 ?
+### 함수 연습 1
 - 정수를 여러 개 받아서 가장 큰 값을 반환하는 함수 작성
 - max 내장 함수 사용 금지
 
@@ -166,3 +168,71 @@ def my_max()
     def func(**kwargs):
         **kwargs : 임의의 개수의 키워드 인자를 받음을 의미한다.
 ```
+
+### 연습 2
+- my_url() 함수를 만들어 완성된 url을 반환하는 함수 작성
+
+```
+    def my url(url, **kwargs) :
+
+```
+
+
+# 함수(function) 2
+
+1. 함수와 스코프
+2. 재귀 함수
+3. 함수 응용
+
+## 1. 함수와 스코프(scope)
+
+- 함수는 코드 내부에 스코프를 생성한다.
+- 함수로 생성된 공간은 `지역 스코프(local scope)`라고 하며
+- 그 외 공간은  `전역 스코프(global scope` 이다.
+
+### 예시
+
+```
+    # 전역 스코프
+    a = 10
+
+    def func(b):
+        b = 10 # 지역 스코프
+        c = 20 # 지역 변수
+        print(a, b, c)
+
+    func(a)
+```
+
+## 2. 재귀함수
+
+### 연습문제
+> 현재 단계가 1단계라면 더 이상 재귀호출을 하지않고 1을 반환한다.
+> 그렇지 않은 경우에는 (현재 단계의 숫자 * 이전 단계의 재귀 함수의 실행결과)를 반환한다.
+
+```
+    def factorial(n):
+        if n == 1 :
+            return 1
+        
+        return n * factorial(n-1)
+```
+
+## 3. 함수 응용
+
+### map(function, iterable)
+- 순회가능한 데이터 구조(iterable)의 모든 요소에 function을 적용한 후 그 결과를 돌려준다.
+- return은 `map_object` 형태이다.
+
+```
+    # 문자열을 숫자로 변환해보자
+    s = '3 3 4 5 8' # [3, 3, 4, 5, 8]로 바꿔야함.
+
+    new_list = []
+    for 
+```
+
+### filter(function, iterable)
+- iterable에서 function의 반환된 결과과 `True`인 것들만 구성하여 반환한다.
+- `filter object`를 반환한다.
+- 
