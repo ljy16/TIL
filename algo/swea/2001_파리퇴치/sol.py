@@ -3,16 +3,14 @@ sys.stdin = open('input.txt')
 
 T = int(input())
 
+for tc in range(1, T + 1):
+    n, m = map(int, input().split())
 
-def hit():
-    for tc in range(1, T + 1):
-        n, m = map(int, input().split())
-
-        matrix = []
-        for _ in range(n):
-            matrix.append(
-                list(map(int, input().split()))
-            )
+    matrix = []
+    for _ in range(n):
+        matrix.append(
+            list(map(int, input().split()))
+        )
 
 
     # 전체 크기 N X N 크기
@@ -26,9 +24,10 @@ def hit():
                 for y in range(m):
                     sum = matrix[x:m-1][y:m-1]
                     a = sum_list.append(sum)
-            # sum = matrix[row][col] + matrix[row][col+1] + matrix[row+1][col] + matrix[row+1][col+1]
-                    return sum_list
 
+            # sum = matrix[row][col] + matrix[row][col+1] + matrix[row+1][col] + matrix[row+1][col+1]
+                max(a)
+                print(max(a))
 
 
     hit()
