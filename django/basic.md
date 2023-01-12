@@ -7,7 +7,7 @@ vscode => ctrl + , => emmet 검색 => emmet : Include Languages => django-html |
 
 2. (vscode는 생성 폴더가 최상단으로 오도록)  장고 설치 (pip install django==3.2.16)  
    
-3. 프로젝트 생성 (django-admin startproject 'template_view') 
+3. 프로젝트 생성 (django-admin startproject 'template_view'.) 
     - 일반적으로 폴더명과 동일한 프로젝트명으로 생성함(구분하기 위해 소문자)
     - 프로젝트를 생성하면 manage.py도 같이 생성됨.
     - 최상단 폴더와 동일한 폴더 -> 마스터 앱이라 부름(template_view -> MASTER APP)
@@ -44,5 +44,3 @@ vscode => ctrl + , => emmet 검색 => emmet : Include Languages => django-html |
     - body에 {% block content %}{% endblock content %} 입력
     - review/templates/index.html에서 내가 공용 템플릿을 쓰겠다 하는 코드가
     - `{% include 'base.html' %}` 이고 `{% block content %} {% endblock content %}` 사이에 내용 입력하면 됨
-
-15. 
