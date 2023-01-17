@@ -34,7 +34,8 @@ pip freeze > requirements.txt
 ```
 django-admin startproject <project_name>
 ```
-
+- 여기서 project_name은 가장 바깥 폴더와 같은 이름으로 하되, 구분하기 위해 소문자로 세팅하는 것이 일반적
+  
 ## 8. app 생성
 ```
 python manage.py startapp <app_name>
@@ -43,22 +44,10 @@ python manage.py startapp <app_name>
 프로젝트 시작할때 자동적으로 해야하는 것들
  - masterapp / settings에 app 등록
  - root에서 templates생성(base.html 위치해야함.)
- - app에서 urls.py, forms.py, templates/app_name안에 필요한 html 생성
+ - app에서 urls.py, forms.py 생성하고,  templates/app_name안에 필요한 html 생성
  - app / models.py에서 db 세팅하고 완료했으면
 
 ```
 python manage.py makemigrations <app_name>
 python manage.py migrate <app_name>
 ```
- - 
-
-
-
-
-
--> forms.py 작성
-class StudentForm
--> views.py 함수 작성
--> 함수명에 요청할 html 작성
-
-주소창에 입력해서 요청하는 것은 다 get임 
