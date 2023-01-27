@@ -4,7 +4,7 @@ from utils import send_msg
 
 app = Flask('hi')
 
-@app.route('/', methods = ['POST'])
+@app.route('/', methods = ['POST']) # /이고 메소드가 post이면 home함수 실행하라
 def home():
     # 서버로서 우리가 받은 요청 -> server
     data = request.json
