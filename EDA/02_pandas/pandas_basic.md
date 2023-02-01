@@ -79,3 +79,39 @@ titan_df.Sex.value_counts()
 ```
 titan_df.rename(columns={'Sex' : 'Gender'}, inplace=True)
 ```
+# 0201 정리
+1. 행렬의 정렬 - sort()
+```
+import numpy as np
+org_arr = np.array([94,97,26,29])
+
+# np.sort()로 정렬 시 원본 변하지 않음
+sort_arr1 = np.sort(org_arr)
+
+# ndarray.sort()로 정렬 시 원본 변함
+sort_arr2 = org_arr.sort()
+```
+
+2. 행렬의 내적(행렬곱)
+
+
+3. 연습문제 복습
+   1. 50살 초과 사람들 추출하고 인덱스 초기화, 상위5개 데이터만
+   ```
+   titan_df[titan_df.Age > 50].reset_index().head(5)
+   ```
+
+   2. 특정 컬럼으로 구성된 데이터 프레임 정의하기
+   ```
+   new_df = chip_df[['quantitiy, 'item_name', 'item_price']]
+   ```
+
+   3. 특정 컬럼에서 특정 단어가 포함된 데이터 추출하기
+   ```
+   chip_df[chip_df.item_name.str.contains('Burrito)].item_name.value_counts()
+   ```
+
+   4. 전체 데이터 결측값 개수 구하기
+   ```
+   chip_df.isna().sum()
+   ```
